@@ -92,11 +92,105 @@
                 <div class="phone-mockup">
                     <div class="phone-screen">
                         <div class="app-preview">
-                            <div class="app-header"></div>
+                            <!-- Status Bar -->
+                            <div class="status-bar">
+                                <div class="status-left">
+                                    <span class="time">9:41</span>
+                                </div>
+                                <div class="status-right">
+                                    <div class="signal-bars">
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                        <div class="bar"></div>
+                                    </div>
+                                    <div class="wifi-icon">📶</div>
+                                    <div class="battery">
+                                        <div class="battery-level"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- App Header -->
+                            <div class="app-header">
+                                <div class="header-content">
+                                    <div class="app-title">TaskMaster Pro</div>
+                                    <div class="header-actions">
+                                        <div class="notification-dot"></div>
+                                        <div class="menu-icon">⋯</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- App Content -->
                             <div class="app-content">
-                                <div class="app-element"></div>
-                                <div class="app-element"></div>
-                                <div class="app-element"></div>
+                                <!-- Progress Stats -->
+                                <div class="stats-container">
+                                    <div class="stat-card">
+                                        <div class="stat-icon">📋</div>
+                                        <div class="stat-number">24</div>
+                                        <div class="stat-label">Tasks</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-icon">✅</div>
+                                        <div class="stat-number">18</div>
+                                        <div class="stat-label">Done</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-icon">⏰</div>
+                                        <div class="stat-number">6</div>
+                                        <div class="stat-label">Pending</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Progress Circle -->
+                                <div class="progress-section">
+                                    <div class="progress-circle">
+                                        <svg width="80" height="80" viewBox="0 0 80 80">
+                                            <circle cx="40" cy="40" r="35" stroke="#e5e7eb" stroke-width="6" fill="none"/>
+                                            <circle cx="40" cy="40" r="35" stroke="#10b981" stroke-width="6" fill="none" 
+                                                    stroke-dasharray="220" stroke-dashoffset="66" 
+                                                    class="progress-bar" transform="rotate(-90 40 40)"/>
+                                        </svg>
+                                        <div class="progress-text">75%</div>
+                                    </div>
+                                    <div class="progress-label">Today's Progress</div>
+                                </div>
+                                
+                                <!-- Task List -->
+                                <div class="task-list">
+                                    <div class="task-item completed">
+                                        <div class="task-checkbox checked">✓</div>
+                                        <div class="task-content">
+                                            <div class="task-title">Design mobile app UI</div>
+                                            <div class="task-time">2 hours ago</div>
+                                        </div>
+                                        <div class="task-priority high"></div>
+                                    </div>
+                                    
+                                    <div class="task-item">
+                                        <div class="task-checkbox"></div>
+                                        <div class="task-content">
+                                            <div class="task-title">Code review session</div>
+                                            <div class="task-time">in 30 minutes</div>
+                                        </div>
+                                        <div class="task-priority medium"></div>
+                                    </div>
+                                    
+                                    <div class="task-item">
+                                        <div class="task-checkbox"></div>
+                                        <div class="task-content">
+                                            <div class="task-title">Client presentation</div>
+                                            <div class="task-time">Tomorrow 2:00 PM</div>
+                                        </div>
+                                        <div class="task-priority high"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Floating Action Button -->
+                                <div class="fab">
+                                    <div class="fab-icon">+</div>
+                                </div>
                             </div>
                         </div>
                     </div>
