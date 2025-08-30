@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact professional mobile app developer for iOS & Android development services. Get support, request quotes, and start your project.">
+    <meta name="keywords" content="contact mobile developer, app development quote, mobile app support, iOS Android developer contact">
+    <title>Contact - Mobile App Developer | MobileDev Pro</title>
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.png" alt="Logo" class="logo-img">
+                <span class="logo-text">MobileDev Pro</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shop.html" class="nav-link">Shop Apps</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">Ready to start your mobile app project? Let's discuss your ideas and requirements.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Start Your Project</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectType">Project Type *</label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="">Select project type</option>
+                                <option value="new-app">New App Development</option>
+                                <option value="app-update">App Update/Enhancement</option>
+                                <option value="app-support">App Support & Maintenance</option>
+                                <option value="backend">Backend Development</option>
+                                <option value="consulting">Technical Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="platform">Platform *</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="platform" value="ios">
+                                    <span class="checkmark"></span>
+                                    iOS
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="platform" value="android">
+                                    <span class="checkmark"></span>
+                                    Android
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="platform" value="cross-platform">
+                                    <span class="checkmark"></span>
+                                    Cross-Platform
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-5k">Under $5,000</option>
+                                <option value="5k-15k">$5,000 - $15,000</option>
+                                <option value="15k-30k">$15,000 - $30,000</option>
+                                <option value="30k-50k">$30,000 - $50,000</option>
+                                <option value="over-50k">Over $50,000</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">Project Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline</option>
+                                <option value="asap">ASAP</option>
+                                <option value="1-2-months">1-2 months</option>
+                                <option value="3-4-months">3-4 months</option>
+                                <option value="5-6-months">5-6 months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Description *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Please describe your project, requirements, and any specific features you need..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-container">
+                    <div class="contact-info-card">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>hello@mobiledevpro.com</p>
+                                <small>Response within 24 hours</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                                <small>Available Mon-Fri, 9AM-6PM EST</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Response Time</h4>
+                                <p>Within 24 hours</p>
+                                <small>Usually much faster!</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Availability</h4>
+                                <p>Worldwide</p>
+                                <small>Remote collaboration</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Chat Widget -->
+                    <div class="live-chat-card">
+                        <h3>Need Immediate Help?</h3>
+                        <p>Start a live chat for quick questions and support.</p>
+                        <button class="btn btn-outline chat-btn" id="startChat">
+                            <i class="fas fa-comments"></i>
+                            Start Live Chat
+                        </button>
+                        <div class="chat-status">
+                            <div class="status-indicator online"></div>
+                            <span>Online now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Request Section -->
+    <section class="support-section">
+        <div class="container">
+            <h2 class="section-title">Need Support?</h2>
+            <div class="support-options">
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Bug Report</h3>
+                    <p>Found a bug in one of my apps? Report it here for quick resolution.</p>
+                    <button class="btn btn-outline support-btn" data-type="bug">Report Bug</button>
+                </div>
+
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Technical Support</h3>
+                    <p>Need help with implementation or have technical questions?</p>
+                    <button class="btn btn-outline support-btn" data-type="technical">Get Support</button>
+                </div>
+
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Feature Request</h3>
+                    <p>Have an idea for a new feature? I'd love to hear your suggestions.</p>
+                    <button class="btn btn-outline support-btn" data-type="feature">Request Feature</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How long does it take to develop a mobile app?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Development time varies based on complexity. Simple apps take 2-3 months, while complex apps with advanced features can take 4-6 months or more. I provide detailed timelines during the planning phase.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you provide ongoing support after launch?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! I offer comprehensive support packages including bug fixes, updates, performance monitoring, and feature enhancements. Support plans start at $500/month.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can you help with app store submission?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! I handle the entire app store submission process, including preparing assets, writing descriptions, and managing the review process for both iOS App Store and Google Play Store.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What platforms do you develop for?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I develop native iOS apps (Swift/SwiftUI), native Android apps (Kotlin/Java), and cross-platform solutions using React Native and Flutter. The choice depends on your specific requirements and budget.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you work with international clients?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! I work with clients worldwide and am experienced in remote collaboration. I accommodate different time zones and use modern communication tools to ensure smooth project delivery.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What's included in your development service?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>My service includes UI/UX design, development, testing, app store submission, documentation, and 30 days of free support. I also provide source code and deployment assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="chat-info">
+                <h4>MobileDev Pro</h4>
+                <span class="chat-status-text">Online</span>
+            </div>
+            <button class="chat-minimize" id="chatMinimize">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hi! I'm here to help. What can I assist you with today?</p>
+                    <div class="quick-replies">
+                        <button class="quick-reply" data-message="I need a quote for my app">Get Quote</button>
+                        <button class="quick-reply" data-message="I have a technical question">Tech Support</button>
+                        <button class="quick-reply" data-message="I want to discuss my project">Discuss Project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message..." id="chatInput">
+            <button class="chat-send" id="chatSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Support Modal -->
+    <div class="modal" id="supportModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="supportModalTitle">Support Request</h3>
+                <button class="modal-close" id="supportModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="support-form" id="supportForm">
+                    <div class="form-group">
+                        <label for="supportEmail">Email Address *</label>
+                        <input type="email" id="supportEmail" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="supportSubject">Subject *</label>
+                        <input type="text" id="supportSubject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="supportPriority">Priority</label>
+                        <select id="supportPriority" name="priority">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="supportDescription">Description *</label>
+                        <textarea id="supportDescription" name="description" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="supportAttachment">Attachment</label>
+                        <input type="file" id="supportAttachment" name="attachment" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+                        <small>Max file size: 10MB</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-ticket-alt"></i>
+                        Submit Support Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/logo.png" alt="Logo" class="logo-img">
+                        <span class="logo-text">MobileDev Pro</span>
+                    </div>
+                    <p class="footer-description">
+                        Professional mobile app development services with 11+ years of experience.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#mobile-dev">Mobile Development</a></li>
+                        <li><a href="services.html#support">App Support</a></li>
+                        <li><a href="services.html#backend">Backend Solutions</a></li>
+                        <li><a href="services.html#consulting">Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="shop.html">Shop Apps</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> hello@mobiledevpro.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Available Worldwide</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MobileDev Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

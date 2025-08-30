@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buy premium mobile apps developed by experienced iOS & Android developer. Secure payment processing with instant download.">
+    <meta name="keywords" content="buy mobile apps, iOS apps for sale, Android apps, premium mobile applications">
+    <title>Shop Mobile Apps - Premium Apps for Sale | MobileDev Pro</title>
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.png" alt="Logo" class="logo-img">
+                <span class="logo-text">MobileDev Pro</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shop.html" class="nav-link active">Shop Apps</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+        <div class="container">
+            <h1 class="page-title">Premium Mobile Apps</h1>
+            <p class="page-subtitle">Ready-to-use mobile applications with source code and documentation</p>
+            <div class="shop-filters">
+                <button class="filter-btn active" data-filter="all">All Apps</button>
+                <button class="filter-btn" data-filter="ios">iOS</button>
+                <button class="filter-btn" data-filter="android">Android</button>
+                <button class="filter-btn" data-filter="cross-platform">Cross-Platform</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cartTotal">0</span></span>
+            </div>
+            <button class="btn btn-primary cart-checkout" id="checkoutBtn">
+                <i class="fas fa-credit-card"></i>
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Toggle Button -->
+    <button class="cart-toggle" id="cartToggle">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <!-- Apps Grid -->
+    <section class="shop-grid">
+        <div class="container">
+            <div class="apps-grid">
+                <!-- App 1 -->
+                <div class="app-card" data-category="ios android">
+                    <div class="app-image">
+                        <div class="app-mockup">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="app-badge">Best Seller</div>
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-title">TaskMaster Pro</h3>
+                        <p class="app-description">Complete task management app with team collaboration, time tracking, and project management features.</p>
+                        <div class="app-features">
+                            <span class="feature-tag">Task Management</span>
+                            <span class="feature-tag">Team Collaboration</span>
+                            <span class="feature-tag">Time Tracking</span>
+                        </div>
+                        <div class="app-tech">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                        <div class="app-pricing">
+                            <span class="app-price">$299</span>
+                            <span class="app-original-price">$399</span>
+                        </div>
+                        <div class="app-actions">
+                            <button class="btn btn-outline demo-btn" data-app="taskmaster">
+                                <i class="fas fa-play"></i> Live Demo
+                            </button>
+                            <button class="btn btn-primary add-to-cart" 
+                                    data-id="taskmaster" 
+                                    data-name="TaskMaster Pro" 
+                                    data-price="299"
+                                    data-image="fas fa-tasks">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 2 -->
+                <div class="app-card" data-category="cross-platform">
+                    <div class="app-image">
+                        <div class="app-mockup">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="app-badge new">New</div>
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-title">FitTracker Elite</h3>
+                        <p class="app-description">Advanced fitness tracking app with workout plans, nutrition tracking, and social features.</p>
+                        <div class="app-features">
+                            <span class="feature-tag">Workout Tracking</span>
+                            <span class="feature-tag">Nutrition Plans</span>
+                            <span class="feature-tag">Social Features</span>
+                        </div>
+                        <div class="app-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="app-pricing">
+                            <span class="app-price">$399</span>
+                        </div>
+                        <div class="app-actions">
+                            <button class="btn btn-outline demo-btn" data-app="fittracker">
+                                <i class="fas fa-play"></i> Live Demo
+                            </button>
+                            <button class="btn btn-primary add-to-cart" 
+                                    data-id="fittracker" 
+                                    data-name="FitTracker Elite" 
+                                    data-price="399"
+                                    data-image="fas fa-dumbbell">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 3 -->
+                <div class="app-card" data-category="ios">
+                    <div class="app-image">
+                        <div class="app-mockup">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-title">StockTracker iOS</h3>
+                        <p class="app-description">Professional stock market tracking app with real-time data, portfolio management, and advanced analytics.</p>
+                        <div class="app-features">
+                            <span class="feature-tag">Real-time Data</span>
+                            <span class="feature-tag">Portfolio Management</span>
+                            <span class="feature-tag">Analytics</span>
+                        </div>
+                        <div class="app-tech">
+                            <span class="tech-tag">SwiftUI</span>
+                            <span class="tech-tag">Core Data</span>
+                            <span class="tech-tag">Charts</span>
+                        </div>
+                        <div class="app-pricing">
+                            <span class="app-price">$199</span>
+                        </div>
+                        <div class="app-actions">
+                            <button class="btn btn-outline demo-btn" data-app="stocktracker">
+                                <i class="fas fa-play"></i> Live Demo
+                            </button>
+                            <button class="btn btn-primary add-to-cart" 
+                                    data-id="stocktracker" 
+                                    data-name="StockTracker iOS" 
+                                    data-price="199"
+                                    data-image="fas fa-chart-line">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 4 -->
+                <div class="app-card" data-category="android">
+                    <div class="app-image">
+                        <div class="app-mockup">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-title">RecipeBook Android</h3>
+                        <p class="app-description">Beautiful recipe management app with meal planning, shopping lists, and cooking timers.</p>
+                        <div class="app-features">
+                            <span class="feature-tag">Recipe Management</span>
+                            <span class="feature-tag">Meal Planning</span>
+                            <span class="feature-tag">Shopping Lists</span>
+                        </div>
+                        <div class="app-tech">
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Room DB</span>
+                            <span class="tech-tag">Material Design</span>
+                        </div>
+                        <div class="app-pricing">
+                            <span class="app-price">$149</span>
+                        </div>
+                        <div class="app-actions">
+                            <button class="btn btn-outline demo-btn" data-app="recipebook">
+                                <i class="fas fa-play"></i> Live Demo
+                            </button>
+                            <button class="btn btn-primary add-to-cart" 
+                                    data-id="recipebook" 
+                                    data-name="RecipeBook Android" 
+                                    data-price="149"
+                                    data-image="fas fa-utensils">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 5 -->
+                <div class="app-card" data-category="cross-platform">
+                    <div class="app-image">
+                        <div class="app-mockup">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-title">ChatApp Pro</h3>
+                        <p class="app-description">Modern messaging app with end-to-end encryption, group chats, file sharing, and video calls.</p>
+                        <div class="app-features">
+                            <span class="feature-tag">End-to-End Encryption</span>
+                            <span class="feature-tag">Video Calls</span>
+                            <span class="feature-tag">File Sharing</span>
+                        </div>
+                        <div class="app-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">WebRTC</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                        <div class="app-pricing">
+                            <span class="app-price">$499</span>
+                        </div>
+                        <div class="app-actions">
+                            <button class="btn btn-outline demo-btn" data-app="chatapp">
+                                <i class="fas fa-play"></i> Live Demo
+                            </button>
+                            <button class="btn btn-primary add-to-cart" 
+                                    data-id="chatapp" 
+                                    data-name="ChatApp Pro" 
+                                    data-price="499"
+                                    data-image="fas fa-comments">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 6 -->
+                <div class="app-card" data-category="ios android">
+                    <div class="app-image">
+                        <div class="app-mockup">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-title">PhotoEditor Pro</h3>
+                        <p class="app-description">Professional photo editing app with advanced filters, AI-powered enhancements, and social sharing.</p>
+                        <div class="app-features">
+                            <span class="feature-tag">Advanced Filters</span>
+                            <span class="feature-tag">AI Enhancement</span>
+                            <span class="feature-tag">Social Sharing</span>
+                        </div>
+                        <div class="app-tech">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">OpenCV</span>
+                        </div>
+                        <div class="app-pricing">
+                            <span class="app-price">$349</span>
+                        </div>
+                        <div class="app-actions">
+                            <button class="btn btn-outline demo-btn" data-app="photoeditor">
+                                <i class="fas fa-play"></i> Live Demo
+                            </button>
+                            <button class="btn btn-primary add-to-cart" 
+                                    data-id="photoeditor" 
+                                    data-name="PhotoEditor Pro" 
+                                    data-price="349"
+                                    data-image="fas fa-camera">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="whats-included">
+        <div class="container">
+            <h2 class="section-title">What's Included</h2>
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Complete Source Code</h3>
+                    <p>Full, well-documented source code with clean architecture and best practices.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Documentation</h3>
+                    <p>Comprehensive setup guide, API documentation, and feature explanations.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Assets</h3>
+                    <p>All design assets, icons, and UI components used in the application.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-life-ring"></i>
+                    </div>
+                    <h3>30-Day Support</h3>
+                    <p>Free support for 30 days to help you get started and resolve any issues.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Free Updates</h3>
+                    <p>Receive updates and bug fixes for 6 months after purchase.</p>
+                </div>
+                <div class="included-item">
+                    <div class="included-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Commercial License</h3>
+                    <p>Full commercial license allowing you to use and modify the code for your projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Secure Checkout</h3>
+                <button class="modal-close" id="paymentModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="checkout-summary">
+                    <h4>Order Summary</h4>
+                    <div id="checkoutItems"></div>
+                    <div class="checkout-total">
+                        <strong>Total: $<span id="checkoutTotal">0</span></strong>
+                    </div>
+                </div>
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-element">Credit or Debit Card</label>
+                        <div id="card-element">
+                            <!-- Stripe Elements will create form elements here -->
+                        </div>
+                        <div id="card-errors" role="alert"></div>
+                    </div>
+                    <button type="submit" id="submit-payment" class="btn btn-primary btn-full">
+                        <span id="button-text">Pay Now</span>
+                        <div id="spinner" class="spinner hidden"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Modal -->
+    <div class="modal" id="demoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>App Demo</h3>
+                <button class="modal-close" id="demoModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="demo-content">
+                    <div class="demo-video">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Demo video will be displayed here</p>
+                        </div>
+                    </div>
+                    <div class="demo-features">
+                        <h4>Key Features</h4>
+                        <ul id="demoFeatures">
+                            <!-- Features will be populated dynamically -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/logo.png" alt="Logo" class="logo-img">
+                        <span class="logo-text">MobileDev Pro</span>
+                    </div>
+                    <p class="footer-description">
+                        Professional mobile app development services with 11+ years of experience.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#mobile-dev">Mobile Development</a></li>
+                        <li><a href="services.html#support">App Support</a></li>
+                        <li><a href="services.html#backend">Backend Solutions</a></li>
+                        <li><a href="services.html#consulting">Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="shop.html">Shop Apps</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> hello@mobiledevpro.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Available Worldwide</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MobileDev Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>
